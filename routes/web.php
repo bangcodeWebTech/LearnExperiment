@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('stocks','StockController@index');
+Route::get('stock/add','StockController@create');
+Route::post('stock/add','StockController@store');
+Route::get('stock/chart','StockController@chart');
