@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('stocks','StockController@index');
-Route::get('stock/add','StockController@create');
-Route::post('stock/add','StockController@store');
-Route::get('stock/chart','StockController@chart');
+// Route::get('/chart','ChartController@index')->name('chart.index');
+Route::get('activity','ActivityController@index')->name('activity.index');
+Route::get('activity/chart','ActivityController@activityChart')->name('activity.chart');
+Route::post('activity/chart/data','ActivityController@activityChartData')->name('activity.get.chart');
