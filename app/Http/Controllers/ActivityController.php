@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Activity;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Exports\ActivityExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ActivityController extends Controller
 {
@@ -117,5 +119,10 @@ class ActivityController extends Controller
         
 
         return response()->json($result);
+    }
+
+     public function export() 
+    {
+        return Excel::download(new ActivityExport, 'act.xlsx');
     }
 }

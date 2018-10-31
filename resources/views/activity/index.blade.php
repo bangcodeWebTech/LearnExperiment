@@ -9,6 +9,8 @@
 		All Activity
 		&nbsp;
 		<a href="{{ route('activity.chart') }}" class="btn btn-primary btn-sm">Lihat Chart</a>
+		&nbsp;
+		<a href="{{route('activity.download')}}" class="btn btn-sm btn-danger">Download</a>
 	</div>
 
 

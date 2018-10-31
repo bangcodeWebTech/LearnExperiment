@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('activity','ActivityController@index')->name('activity.index');
 Route::get('activity/chart','ActivityController@activityChart')->name('activity.chart');
 Route::post('activity/chart/data','ActivityController@activityChartData')->name('activity.get.chart');
+Route::get('activity/download','ActivityController@export')->name('activity.download');
